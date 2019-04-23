@@ -1,0 +1,65 @@
+/* pages/message/message.wxss */
+.container{
+  height: 1500rpx;
+}
+.top-tab{
+  width: 750rpx;
+  height: 100rpx;
+  background: white;
+  color: #8B8B83;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 2px #bebebe;
+  margin: 0 0 8rpx 0;
+  z-index: 9999;
+}
+.left-view{
+  width:150rpx;
+}
+.user-avator{
+  width:100rpx;
+  height:100rpx;
+  margin:30rpx 20rpx 0 20rpx;
+}
+.user-name{
+  display: flex;
+  height: 50rpx;
+  line-height:50rpx;
+  font-size:15px;
+  color:rgb(88,103,138);
+  margin-top:30rpx;
+  margin-left:10rpx;
+}
+.user-content{
+  display: flex;
+  font-size:15px;
+  line-height: 50rpx;
+  margin-left:10rpx;
+}
+.user-photo-view{
+  flex-flow: row wrap;
+  margin-bottom: 20rpx;
+}
+.photo{
+  margin-left:10rpx;
+  margin-top:10rpx;
+}
+.time{
+  margin-left:10rpx;
+  margin-bottom: 10rpx;
+  font-size:10px;
+}
+.numbers{
+  justify-content: space-between;
+  font-size:10px;
+  color:#BEBEBE;
+  margin-bottom: 10rpx;
+  margin-right: 10rpx;
+}
+.add_button{
+  position:fixed;
+  width:100rpx;
+  height:100rpx;
+  bottom: 30rpx;
+  right:30rpx;
+}

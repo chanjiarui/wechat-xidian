@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/add/add",
+    "pages/message/message",
+    "pages/index/index",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EE0000",
+    "navigationBarTitleText": "XIDIAN",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#626567",
+    "selectedColor": "#2A8CE5",
+    "backgroundColor": "#FBFBFB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/message/message",
+        "text": "",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_focus.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "images/burger.png",
+        "selectedIconPath": "images/burger_focus.png"
+      }
+    ]
+  }
+}
