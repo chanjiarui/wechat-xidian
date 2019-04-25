@@ -20,6 +20,14 @@ Page({
       url: '../add/add'
     })
   },
+  /**
+   * 跳转到详情页面
+   */
+  bindQueTap:function(){
+    wx.navigateTo({
+      url: '../details/details'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/add/add",
     "pages/message/message",
+    "pages/details/details",
+    "pages/add/add",
     "pages/index/index",
     "pages/logs/logs"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -3,6 +3,11 @@
   <view class="main">
     <view class="mode_choise">
       <label class="mode_title">发布模块:</label>
+      <picker bindchange='bindCasPickerChange' value="{{casIndex1}}" range='{{casArray}}'>
+        <view>
+          <text>{{casArray[casIndex]}}</text>
+        </view>
+      </picker>
     </view>
     <view class="input_content">
       <label class="mode_title">发布内容</label>
@@ -12,9 +17,7 @@
       <label class="mode_title">是否开启匿名</label>
     </view>
     <view class="images-wrapper">
-          <!--<text class="images-text">请选择图片</text>-->
           <view class="images-list">
-          <!-- <image src="{{source}}" class="images-image"></image> -->
             <block wx:for="{{imageList}}" wx:for-item="image" wx:key="{{index}}">
               <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
             </block>
@@ -24,6 +27,6 @@
             </view>
           </view>
     </view>
-    <button class="submit_button">发布内容</button>
+    <button class="submit_button" form-type="submit">发布内容</button>
   </view>
 </form>

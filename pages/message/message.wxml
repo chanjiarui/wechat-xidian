@@ -21,7 +21,7 @@ bindscrolltolower="lower" scroll-top="{{scrollTop}}" scroll-into-view="toView">
             <label class="user-name">{{item.username}}</label>
           </view>
           <!--内容-->
-          <view class="user-content-view">
+          <view class="user-content-view" bindtap="bindQueTap">
             <text class="user-content">{{item.content}}</text>
           </view>
           <!--图片-->
