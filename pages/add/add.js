@@ -94,7 +94,11 @@ Page({
         wx.request({
           url: '',
           data:{
-
+            openid:"",
+            mode:"",
+            content:"",
+            is_anonymous:"",
+            photos:""
           },
           header:{
             'content-type': 'application/x-www-form-urlencoded'
