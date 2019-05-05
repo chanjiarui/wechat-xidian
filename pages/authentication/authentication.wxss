@@ -1,0 +1,53 @@
+/* pages/authentication/authentication.wxss */
+.authentication_main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 750rpx;
+  align-items: center;
+  margin-top:100rpx;
+  font-size:15px;
+  color:#4F4F4F;
+  height: 750rpx;
+}
+.label1{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size:20px;
+}
+.school{
+  width:80%;
+  border-bottom: 1px solid #D3D3D3;
+  display: flex;
+  flex-direction: row;
+  padding:15rpx 0;
+}
+.college{
+  width:80%;
+  border-bottom: 1px solid #D3D3D3;
+  display: flex;
+  flex-direction: row;
+  padding:15rpx 0;
+}
+.degree{
+  width:80%;
+  border-bottom: 1px solid #D3D3D3;
+  display: flex;
+  flex-direction: row;
+  padding:15rpx 0;
+}
+.student_number{
+  width:80%;
+  border-bottom: 1px solid #D3D3D3;
+  display: flex;
+  flex-direction: row;
+  padding:15rpx 0;
+}
+.submit_button{
+  width:80%;
+  background-color:#EE0000;
+  margin:50rpx 0; 
+  color:white;
+}

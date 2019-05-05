@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="index_main">
+  <view class="title">
+    <text>西电之墙</text>
+  </view>
+  <view class="descrition">
+    <text>西电相亲、招聘、二手交易信息墙</text>
+  </view>
+  <view class="logo">
+    <image class='logo_image' src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556600659596&di=5b9212c07fcd4d6459a12f4b85f4df65&imgtype=0&src=http%3A%2F%2Fimg.ccutu.com%2Fupload%2Fimages%2F2017-6%2Fp00026789.jpg"></image>
+  </view>
+  <button class="click_button" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button>
+  <view class="bottom-content">
+    <text>登录即同意西电之墙用户协议和隐私政策</text>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<!--pages/message/message.wxml-->
+<view class="top-tab flex-wrp flex-tab " >
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<scroll-view scroll-y="true" class="container withtab" bindscrolltoupper="upper"
+bindscrolltolower="lower" scroll-top="{{scrollTop}}" scroll-into-view="toView">
+  <view class='ctnt0' hidden="{{currentNavtab==0 ? '' : true}}">
+    <block wx:for="{{feed}}" wx:for-index='idx' wx:for-item="item" data-idx="{{idx}}">
+      <!--头像，昵称，内容-->
+      <view class="feed-item flex-wrp">
+        <!--头像-->
+        <view class="left-view">
+          <image class="user-avator" src="{{item.useravator}}"></image>
+        </view>
+        <!--昵称，内容，图片-->
+        <view class="right-view">
+          <!--昵称-->
+          <view class="user-name-view">
+            <label class="user-name">{{item.username}}</label>
+          </view>
+          <!--内容-->
+          <view class="user-content-view" bindtap="bindQueTap">
+            <text class="user-content">{{item.content}}</text>
+          </view>
+          <!--图片-->
+          <view class="user-photo-view flex-wrp">
+            <view class="photo" wx:for='{{item.photos}}' style='width:{{photoWidth}}px;height:{{photoWidth}}px'>
+              <image bindtap='lookPhoto' data-photUrl='{{item}}' src='{{item}}' style='width:{{photoWidth}}px;height:{{photoWidth}}px'></image>
+            </view>
+          </view>
+          <!--时间,浏览过的人数，评论数，点赞数-->
+          <!-- <view class="user-bottom-view flex-wrp"> -->
+            <!--时间-->
+            <view class="time">
+              <label>{{item.time}}</label>
+            </view>
+            <!--浏览过的人数，评论数，点赞数-->
+            <view class="flex-wrp numbers">
+              <view class="look-num">
+                <image src="../../images/eye.png" style="width:50rpx;height:50rpx;"></image>
+                <label>{{item.look_num}}</label>
+              </view>
+              <view class="comment-num">
+                <image src="../../images/comment2.png" style="width:50rpx;height:50rpx;"></image>
+                <label>{{item.comment_num}}</label>
+              </view>
+              <view class="like-num">
+                <image src="../../images/heart2.png" style="width:50rpx;height:50rpx;"></image>
+                <label>{{item.like_num}}</label>
+              </view>
+            </view>
+          <!-- </view> -->
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='ctnt1' hidden="{{currentNavtab==1 ? '' : true}}">
+  </view>
+  <view class='ctnt2' hidden="{{currentNavtab==2 ? '' : true}}">
+  </view>
+  <view class='ctnt3' hidden="{{currentNavtab==3 ? '' : true}}">
+  </view>
+</scroll-view>
+<view bindtap="addPost">
+    <image class="add_button" src="../../images/plus-circle.png"></image>
+</view>

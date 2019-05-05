@@ -1,0 +1,56 @@
+<!--pages/details/details.wxml-->
+
+<scroll-view class='container' style="height:{{scrollHeight}}px;" scroll-top="0" scroll-y="true">
+  <view class="details_main">
+    <!--头像、昵称、时间-->
+    <view class="details-top flex-wrp">
+      <image class="user-avator" src="{{item.useravator}}"></image>
+      <label class="user-name">{{item.username}}</label>
+    </view>
+    <!--内容-->
+    <view class="details-content">
+      <view class="right-view">
+        <text class="user-content">{{item.content}}</text>
+      </view>
+    </view>
+    <!--图片-->
+    <view class="details-photos">
+      <view class="right-view photos">
+        <view class="photo" wx:for='{{item.photos}}' style='width:{{photoWidth}}px;height:{{photoWidth}}px'>
+              <image bindtap='lookPhoto' data-photUrl='{{item}}' src='{{item}}' style='width:{{photoWidth}}px;height:{{photoWidth}}px'></image>
+        </view>
+      </view>
+    </view>
+    <!--浏览过的用户的头像-->
+    <view class="look_people_avator">
+        <view class="avator" wx:for='{{item.look_people_avators}}'>
+              <image class="avator_image" data-photUrl='{{item}}' src='{{item}}'></image>
+        </view>
+    </view>
+    <!--评论-->
+    <view class="details_comment">
+      <view wx:for='{{item.comments}}' wx:for-index='idx' wx:for-item="item" class="one_comment">
+        <view class="comment_left">
+          <image class="user-avator_comment" src="{{item.useravator}}"></image>
+        </view>
+        <view class="comment_right">
+          <view class="username_time">
+            <label class="user-name_comment">{{item.username}}</label>
+            <label class="user_time_comment">{{item.time}}</label>
+          </view>
+          <view class="comment_content">
+            <text class="">{{item.content}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<form bindsubmit="submitForm" report-submit="true">
+  <view class="input_comment input_comment_container">
+      <textarea placeholder-class="input_null" fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" placeholder="请输入回复" name="comment"></textarea>
+      <button form-type="submit" class="submit">发送</button>
+  </view>
+</form>
+

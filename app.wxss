@@ -1,0 +1,51 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  /*决定主轴的方向*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  background: #F0F4F3;
+}
+/*带顶部导航栏*/
+.container.withtab{
+  /* margin: 105rpx 0 0 0; */
+  /*top: 105rpx;*/
+}
+/*flex布局*/
+.flex-wrp{
+  display: flex;
+} 
+.flex-tab{
+  /*flex-flow是flex-direction和flex-wrap的简写*/
+  /*flex-wrap如何换行*/
+  flex-flow: row nowrap;
+  /*项目在主轴上的对齐方式*/
+  justify-content: space-around;
+  /*项目在交叉轴上的对齐方式*/
+  align-items: stretch;
+}
+.flex-item{
+  /*项目的放大比例*/
+  flex-grow: 1;
+  /*字体的对齐方式*/
+  text-align: center;
+}
+.toptab.active{
+  color: #EE0000;
+  font-size: 35rpx;
+  font-weight: bold;
+  border-bottom: solid 2px #EE0000;
+}
+.container .feed-item{
+  width:740rpx;
+  margin:7rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+  box-shadow: 0 2rpx 5rpx #eeeeee;
+}
+

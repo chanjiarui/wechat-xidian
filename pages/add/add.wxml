@@ -1,0 +1,32 @@
+<!--pages/add/add.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="main">
+    <view class="mode_choise">
+      <label class="mode_title">发布模块:</label>
+      <picker bindchange='bindCasPickerChange' value="{{casIndex1}}" range='{{casArray}}'>
+        <view>
+          <text>{{casArray[casIndex]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="input_content">
+      <label class="mode_title">发布内容</label>
+        <textarea class="shuru1"placeholder="" placeholder-style="font-size:13pt;"  name="content"/>
+    </view>
+    <view class="is_anonymous">
+      <label class="mode_title">是否开启匿名</label>
+    </view>
+    <view class="images-wrapper">
+          <view class="images-list">
+            <block wx:for="{{imageList}}" wx:for-item="image" wx:key="{{index}}">
+              <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
+            </block>
+            <view class="images-image image-plus" bindtap="chooseImage">
+              <view class="image-plus-horizontal"></view>
+              <view class="image-plus-vertical"></view>
+            </view>
+          </view>
+    </view>
+    <button class="submit_button" form-type="submit">发布内容</button>
+  </view>
+</form>
